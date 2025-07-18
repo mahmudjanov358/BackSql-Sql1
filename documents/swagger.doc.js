@@ -1,0 +1,22 @@
+const swaggerJsdoc = require("swagger-jsdoc"); // ----Swagger-JSDoc Library
+const swaggerUi = require("swagger-ui-express"); // ----Swagger-UI Express Library
+
+const options = {
+  definition: {
+    openapi: "3.0.0",
+    info: {
+      title: "Express API  with Swagger",
+      version: "1.0.0",
+      description: "API hujjatlari uchun Swagger dokumentatsiyasi",
+    },
+  }, // ----Definition
+  apis: ["../routers/*.js"], // ----APIs
+};
+
+const swaggerSpec = swaggerJsdoc(options); // ----SwaggerSpec
+
+const setupSwagger = (app) => {
+  app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+}; // ----SetupSwagger
+
+module.exports = setupSwagger; // ----Exports SetupSwagger
