@@ -26,9 +26,10 @@ module.exports = (sequelize, DataTypes) => {
     },
   }); // ----User Model
 
-  return User.beforeSave(async (user) => {
+  User.beforeSave(async (user) => {
     if (user.changed("password")) {
       user.password = await bcrypt.hash(user.password, 10);
     }
   }); // ----Before Save
+  return User; // ----Return User Model
 };

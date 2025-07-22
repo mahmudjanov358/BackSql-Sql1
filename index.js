@@ -1,3 +1,5 @@
+"use strict";
+
 const express = require("express"); // ----Express Framework
 const cors = require("cors"); // ----CORS Middleware
 const setupSwagger = require("./documents/swagger.doc"); // ----Swagger Setup
@@ -7,7 +9,7 @@ require("dotenv").config(); // ----Environment Variables
 const app = express(); // ----Express Application
 
 app.use(express.json()); // ----JSON Middleware
-app.use(cors()); // ----CORS Middleware
+app.use(cors({ origin: "*" })); // ----CORS Middleware
 
 setupSwagger(app); // ----Swagger Setup
 
