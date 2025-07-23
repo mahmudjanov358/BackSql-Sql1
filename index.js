@@ -1,5 +1,3 @@
-"use strict";
-
 const express = require("express"); // ----Express Framework
 const cors = require("cors"); // ----CORS Middleware
 const setupSwagger = require("./documents/swagger.doc"); // ----Swagger Setup

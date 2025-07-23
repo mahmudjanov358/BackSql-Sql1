@@ -1,29 +1,26 @@
-const { User } = require("../models/user.model"); // ----User Model
+const { User } = require("../models/main"); // ----User Model
+const { where } = require("sequelize"); // ----Sequelize Library
 const {
   userValidation,
   validationUser,
 } = require("../validations/user.validation"); // ----User Validation
 
-exports.register = async (req, res) => {
+exports.postUser = async (req, res) => {
   const { error } = userValidation(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
   try {
     const user = User.create(req.body);
-    return res.status(201).json({
-      success: true,
-      message: "User muvaffaqiyatli qo'shildi",
-      user: user,
-    });
+    return res.status(201).send(user);
   } catch (error) {
     return res.status(500).send(error.message);
   }
-}; // ----Register
+}; // ----postUser
 
 exports.getUser = async (req, res) => {
   try {
-    const user = await User.findAll();
-    return res.status(200).send(user);
+    const users = await User.findAll();
+    return res.status(200).send(users);
   } catch (error) {
     return res.status(500).send(error.message);
   }
@@ -42,7 +39,6 @@ exports.getUserById = async (req, res) => {
 exports.updateUser = async (req, res) => {
   const { error } = validationUser(req.body);
   if (error) return res.status(400).send(error.details[0].message);
-
   try {
     const user = await User.findByPk(req.params.id);
     if (!user) return res.status(404).send("User topilmadi!");
@@ -62,6 +58,30 @@ exports.deleteUser = async (req, res) => {
     const userData = user.toJSON();
     await user.destroy();
     return res.status(200).send(userData);
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+};
+
+exports.searchUser = async (req, res) => {
+  try {
+    console.log("Query received — ", req.query.query);
+    const { query } = req.query;
+
+    if (!query) {
+      return res.status(400).send("Search query is required!");
+    } else {
+      const user = await User.findAll({
+        where: {
+          [Op.or]: [
+            { name: { [Op.iLike]: `%${query}%` } },
+            { email: { [Op.iLike]: `%${query}%` } },
+          ],
+        },
+        // ----include: [{ model: Customer, as: "customer" }],
+      });
+      return res.status(200).send(user);
+    }
   } catch (error) {
     return res.status(500).send(error.message);
   }
