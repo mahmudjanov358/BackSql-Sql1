@@ -88,7 +88,7 @@ U yerda har bir endpointni test qilishingiz mumkin (`CREATE`, `READ`, `UPDATE`, 
 
 ## 💬 Muallif
 
-**ABDULLOH MAHMUDJANOV** tomonidan yaratilgan — **_"Backend Project1 loyihasi"_**
+**ABDULLOH MAHMUDJANOV** tomonidan yaratilgan — **_"Backend SQL1 loyihasi"_**
 
 ---
 
