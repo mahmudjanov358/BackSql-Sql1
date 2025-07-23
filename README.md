@@ -107,4 +107,4 @@ U yerda har bir endpointni test qilishingiz mumkin (`CREATE`, `READ`, `UPDATE`, 
 
 ## 📄 Litsenziya
 
-Ushbu loyiha MIT litsenziyasi asosida tarqatiladi.
+Ushbu loyiha ISC litsenziyasi asosida tarqatiladi.
