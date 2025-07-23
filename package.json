@@ -29,7 +29,7 @@
   ],
   "author": "Abdulloh Mahmudjanov",
   "license": "ISC",
-  "description": "Backend ta'limlari uchun 'SQL Backend' dasturi Express.js va Sequelize framework bilan ishlaydigan Swagger API bilan uyg' uchun",
+  "description": "Backend ta'limlari uchun 'SQL Backend' dasturi Express.js va Sequelize framework bilan ishlaydigan, Swagger API bilan uyg'unlashgan va PostgreSQL database bilan ishlaydigan 'sql1' loyihasi!",
   "dependencies": {
     "bcrypt": "^6.0.0",
     "cors": "^2.8.5",
