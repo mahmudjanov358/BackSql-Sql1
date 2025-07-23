@@ -1,16 +1,13 @@
 const { User } = require("../models/main"); // ----User Model
-const { where } = require("sequelize"); // ----Sequelize Library
-const {
-  userValidation,
-  validationUser,
-} = require("../validations/user.validation"); // ----User Validation
+const { Op } = require("sequelize"); // ----Sequelize Library
+const { validationUser } = require("../validations/user.validation"); // ----User Validation
 
 exports.postUser = async (req, res) => {
-  const { error } = userValidation(req.body);
+  const { error } = validationUser(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
   try {
-    const user = User.create(req.body);
+    const user = await User.create(req.body);
     return res.status(201).send(user);
   } catch (error) {
     return res.status(500).send(error.message);

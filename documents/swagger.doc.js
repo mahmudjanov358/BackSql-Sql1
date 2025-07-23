@@ -9,8 +9,14 @@ const options = {
       version: "1.0.0",
       description: "API hujjatlari uchun Swagger dokumentatsiyasi",
     },
+    servers: [
+      {
+        url: "http://localhost:4000",
+      },
+    ],
+    tags: [{ name: "User", description: "User bo'limi bilan ishlash" }],
   },
-  apis: ["../routers/*.js"], // ----APIs
+  apis: ["./routers/*.js"], // ----APIs
 };
 
 const swaggerSpec = swaggerJsdoc(options); // ----SwaggerSpec

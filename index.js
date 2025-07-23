@@ -11,6 +11,10 @@ app.use(cors({ origin: "*" })); // ----CORS Middleware
 
 setupSwagger(app); // ----Swagger Setup
 
+// ----Routers
+const user = require("./routers/user.routes");
+app.use("/user", user);
+
 const PORT = process.env.PORT || 4000; // ----Port Configuration
 sequelize.sync().then(() => {
   app.listen(PORT, () => {
