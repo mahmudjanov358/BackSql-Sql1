@@ -1,1 +1,1 @@
-# Loyiha ishlanmoqda...!!!
+# Loyiha ishlanmoqda...🖥
