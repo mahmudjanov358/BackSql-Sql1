@@ -1,7 +1,7 @@
 const express = require("express"); // ----Express Framework
 const cors = require("cors"); // ----CORS Middleware
-const setupSwagger = require("./documents/swagger.doc"); // ----Swagger Setup
-const sequelize = require("./configs/database"); // ----Database Configuration
+const setupSwagger = require("./src/documents/swagger.doc"); // ----Swagger Setup
+const sequelize = require("./src/configs/database"); // ----Database Configuration
 require("dotenv").config(); // ----Environment Variables
 
 const app = express(); // ----Express Application
@@ -12,7 +12,7 @@ app.use(cors({ origin: "*" })); // ----CORS Middleware
 setupSwagger(app); // ----Swagger Setup
 
 // ----Routers
-const user = require("./routers/user.routes");
+const user = require("./src/routers/user.routes");
 app.use("/user", user);
 
 const PORT = process.env.PORT || 4000; // ----Port Configuration

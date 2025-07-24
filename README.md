@@ -66,10 +66,10 @@ npm i bcrypt cors dotenv express joi jsonwebtoken pg pg-hstore sequelize swagger
 3. **Serverni ishga tushurish:**
 
 ```bash
-npm run go        # yoki
-npm run dev       # yoki
-npm start         # yoki
-node index.js
+npm run go        # Tez/Oson
+npm run dev       # Doimiy
+npm start         # Yondashuvli
+node index.js     # Index.js
 ```
 
 ---

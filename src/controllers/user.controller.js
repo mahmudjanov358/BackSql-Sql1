@@ -17,7 +17,7 @@ exports.postUser = async (req, res) => {
 exports.getUser = async (req, res) => {
   try {
     const users = await User.findAll();
-    return res.status(200).send(users);
+    return res.status(200).send({ message: "Userlar ro'yxati", users });
   } catch (error) {
     return res.status(500).send(error.message);
   }

@@ -16,7 +16,7 @@ const options = {
     ],
     tags: [{ name: "User", description: "User bo'limi bilan ishlash" }],
   },
-  apis: ["./routers/*.js"], // ----APIs
+  apis: ["./src/routers/*.js"], // ----APIs
 };
 
 const swaggerSpec = swaggerJsdoc(options); // ----SwaggerSpec
