@@ -14,7 +14,10 @@ const options = {
         url: "http://localhost:4000",
       },
     ],
-    tags: [{ name: "User", description: "User bo'limi bilan ishlash" }],
+    tags: [
+      { name: "User", description: "User bo'limi bilan ishlash" },
+      { name: "Customer", description: "Customer bo'limi bilan ishlash" },
+    ],
   },
   apis: ["./src/routers/*.js"], // ----APIs
 };

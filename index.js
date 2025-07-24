@@ -13,7 +13,9 @@ setupSwagger(app); // ----Swagger Setup
 
 // ----Routers
 const user = require("./src/routers/user.routes");
-app.use("/user", user);
+app.use("/user", user); // ----User Router
+const customer = require("./src/routers/customer.routes");
+app.use("/customer", customer); // ----Customer Router
 
 const PORT = process.env.PORT || 4000; // ----Port Configuration
 sequelize.sync().then(() => {
