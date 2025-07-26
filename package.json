@@ -5,8 +5,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "go": "nodemon index.js",
+    "go:dev": "nodemon index.js",
+    "go:start": "nodemon index.js",
     "dev": "nodemon index.js",
-    "start": "node index.js"
+    "dev:go": "nodemon index.js",
+    "dev:start": "nodemon index.js",
+    "start": "nodemon index.js",
+    "start:go": "nodemon index.js",
+    "start:dev": "nodemon index.js"
   },
   "keywords": [
     "SQL Backend",
