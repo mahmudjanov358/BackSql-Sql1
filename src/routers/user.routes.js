@@ -21,6 +21,8 @@ module.exports = Router()
    *                type: string
    *              password:
    *                type: string
+   *              customer_id:
+   *                type: number
    *    responses:
    *      201:
    *        description:  User muvaffaqiyatli yaratildi!
@@ -121,6 +123,8 @@ module.exports = Router()
    *                type: string
    *              password:
    *                type: string
+   *              customer_id:
+   *                type: number
    *    responses:
    *      200:
    *        description: User yangilandi!

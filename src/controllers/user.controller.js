@@ -1,6 +1,7 @@
 const { User } = require("../models/main"); // ----User Model
 const { Op } = require("sequelize"); // ----Sequelize Library
 const { validationUser } = require("../validations/user.validation"); // ----User Validation
+const { Customer } = require("../models/main");
 
 exports.postUser = async (req, res) => {
   const { error } = validationUser(req.body);
@@ -25,7 +26,14 @@ exports.getUser = async (req, res) => {
 
 exports.getUserById = async (req, res) => {
   try {
-    const user = await User.findByPk(req.params.id);
+    const user = await User.findByPk(req.params.id, {
+      include: [
+        {
+          model: Customer,
+          as: "customer",
+        },
+      ],
+    });
     if (!user) return res.status(404).send("User aniqlanmadi!");
     else return res.status(200).send(user);
   } catch (error) {
