@@ -113,4 +113,4 @@ U yerda har bir endpointni test qilishingiz mumkin (`CREATE`, `READ`, `UPDATE`, 
 
 ## 📄 Litsenziya
 
-Ushbu loyiha MIT litsenziyasi asosida tarqatiladi.
+Ushbu loyiha **MIT** litsenziyasi asosida tarqatiladi.Buning uchun [MIT](**LICENSE**) faylga qarab ko'ring.
