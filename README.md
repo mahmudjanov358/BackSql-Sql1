@@ -70,12 +70,12 @@ npm run go        # Tez/Oson
 npm run go:dev    # Tez/Oson (Yiroq)
 npm run go:start  # Tez/Oson (Yiroq)
 npm run dev       # Doimiy
-npm run dev:go    # Doimiy Yiroq
-npm run dev:start # Doimiy Yiroq
+npm run dev:go    # Doimiy (Yiroq)
+npm run dev:start # Doimiy (Yiroq)
 npm run start     # Yondashuvli
-npm run start:go  # Yondashuvli Yiroq
-npm run start:dev # Yondashuvli Yiroq
-node index.js     # Index.js (Yondashuvli Yiroq)
+npm run start:go  # Yondashuvli (Yiroq)
+npm run start:dev # Yondashuvli (Yiroq)
+npm run index.js  # Index.js (Yondashuvli Yiroq)
 ```
 
 ---
