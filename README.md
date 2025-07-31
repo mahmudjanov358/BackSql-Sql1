@@ -15,7 +15,7 @@ Swagger yordamida API hujjatlari avtomatik generatsiya qilingan.
 - [Joi](https://joi.dev/) – validatsiya
 - [bcrypt](https://github.com/kelektiv/node.bcrypt.js) – parolni hash qilish
 - [Swagger](https://swagger.io/) – API hujjatlash
-- [dotenv](https://github.com/motdotla/dotenv) – muqim sozlamalar
+- [dotenv](https://github.com/motdotla/dotenv) – muhim sozlamalar
 
 ---
 
