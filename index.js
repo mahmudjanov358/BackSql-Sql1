@@ -20,6 +20,6 @@ app.use("/customer", customer); // ----Customer Router
 const PORT = process.env.PORT || 4000; // ----Port Configuration
 sequelize.sync().then(() => {
   app.listen(PORT, () => {
-    console.log(`Server http://localhost${PORT} PORTida ishga tushdi!`);
+    console.log(`Server http://localhost:${PORT} PORTida ishga tushdi!`);
   });
 }); // ----Server Start
